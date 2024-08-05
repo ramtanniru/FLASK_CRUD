@@ -24,8 +24,6 @@ class auth_model:
                     role_id = decoded['payload']['role_id']
                     self.curr.execute(f"SELECT roles FROM accessbility_view WHERE endpoint='{endpoint}")
                     res = self.curr.fetchall()
-                    if len(res)>0:
-                        
                     return func(*args)
                 return "Invalid token"
             return inner2
