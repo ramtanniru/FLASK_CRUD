@@ -1,0 +1,8 @@
+flask
+datetime
+mysql.connector
+jwt
+re
+os
+glob
+gunicorn
