@@ -78,7 +78,7 @@ class user_model:
         else:
             return make_response({"message":"Nothing to update"},202)
         
-    # POST
+    # POST JWT
     def user_login_model(self,data):
         self.curr.execute(f"SELECT name,email,phone,avatar,role_id FROM users WHERE name='{data['username']}' AND password='{data['password']}'")
         res = self.curr.fetchall()
